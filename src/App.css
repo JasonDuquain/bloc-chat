@@ -1,28 +1,38 @@
-.App {
-  text-align: center;
+
+
+/**********  RoomList    ***********/
+
+.roomlist {
+    display: flex;
+    height: 100vh;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.roomlist__sidebar {
+    padding: 2em;
+    flex: 1;
+    background-color: #999;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.roomlist__sidebar-heading {
+    font-size: 1.5em;
 }
 
-.App-title {
-  font-size: 1.5em;
+.roomlist__list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
 
-.App-intro {
-  font-size: large;
+.roomlist__item {
+    color: #444
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.roomlist__item:not(:last-of-type)  {
+    margin-bottom: .7em;
 }
+
+.roomlist__main {
+    flex: 3;
+    
+}
+
