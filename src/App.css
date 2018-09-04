@@ -15,6 +15,14 @@
 
 .roomlist__sidebar-heading {
     font-size: 1.5em;
+    display: inline-block;
+    margin-right: .7em;
+    vertical-align: middle;
+}
+
+.roomlist__sidebar-btn {
+    padding: .4em .7em;
+    cursor: pointer;
 }
 
 .roomlist__list {
@@ -33,6 +41,60 @@
 
 .roomlist__main {
     flex: 3;
-    
+    position: relative;
 }
+
+/*********Create new room modal ********/
+
+.roomlist__modal {
+    transition: all 400ms ease-in;
+    width: 30%;
+    position: absolute;
+    top: 10em;
+    left: 10em;
+    background-color: #999;
+    padding: 1em 2em 2em 2em;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.roomlist__modal.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.roomlist__modal label {
+    display: block;
+    margin-bottom: .4em;
+}
+
+#roomlist_input {
+   margin-bottom: .75em; 
+    min-height: 1.5em;
+    width: 100%;
+}
+
+.roomlist__modal button {
+    padding: .5em 1em;
+    border: none;
+    width: 50%;
+    cursor: pointer;
+}
+
+.roomlist__modal button:last-of-type {
+    color: #fff;
+    background-color: #666;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
