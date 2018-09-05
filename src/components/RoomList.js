@@ -16,7 +16,8 @@ class RoomList extends Component {
        this.roomsRef.on('child_added', snapshot => {
            const room = snapshot.val();
            room.key = snapshot.key;
-           this.setState({ rooms: this.state.rooms.concat( room ) })
+           this.setState({ rooms: this.state.rooms.concat( room ) });
+           
        });
    }
     
@@ -24,7 +25,7 @@ class RoomList extends Component {
         document.querySelector('.roomlist__modal').classList.add('show');
     }
     
-    // 20180904 - enter more validation in future and also validate new room doesnt already exist - this might be part of a future checkpoint so not yet
+    // ***20180904 - enter more validation in future and also validate new room doesnt already exist - this might be part of a future checkpoint so not yet ***20180905 - remove modal box after new room is created
     createRoom(e) {
         e.preventDefault();
         const roomName = e.target.elements.roomlist_input.value
@@ -32,7 +33,7 @@ class RoomList extends Component {
               this.roomsRef.push({
               name: roomName
             });
-            e.target.elements.roomlist_input.value = '';
+            document.querySelector('.roomlist__modal').classList.remove('show');
         } else {
             alert('please enter a room name');
         }
