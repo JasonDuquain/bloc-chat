@@ -26,7 +26,6 @@ class RoomList extends Component {
         document.querySelector('.roomlist__modal').classList.add('show');
     }
     
-    // ***20180904 - enter more validation in future and also validate new room doesnt already exist - this might be part of a future checkpoint so not yet ***20180905 - remove modal box after new room is created
     handleCreateRoom(e) {
         e.preventDefault();
         const roomName = e.target.elements.roomlist_input.value
@@ -53,9 +52,7 @@ class RoomList extends Component {
                            <li key={el.key} className="roomlist__item" onClick={ () => this.props.setRoom(el)}>{el.name}</li>)
                   }
                </ul>
-            </div>
-            <div className="roomlist__main">
-                 <div className="roomlist__modal">
+                <div className="roomlist__modal">
                      <h3>Create new room</h3>
                     <form className="roomlist__form" onSubmit={this.handleCreateRoom}>
                         <label htmlFor="roomlist_input">Enter a room Name</label>
@@ -65,6 +62,7 @@ class RoomList extends Component {
                     </form>
                 </div>   
             </div>
+                 
         </div>
     );
   }

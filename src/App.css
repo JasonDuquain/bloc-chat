@@ -3,13 +3,15 @@
 /**********  RoomList    ***********/
 
 .roomlist {
-    display: flex;
-    height: 100vh;
+    
 }
 
 .roomlist__sidebar {
-    padding: 2em;
-    flex: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 33%;
     background-color: #999;
 }
 
@@ -93,9 +95,25 @@
 }
 
 
+.message-list {
+    width: 66%;
+    margin-left: 33%;
+}
 
+.message-list h2 {
+    text-align: center;
+}
 
+.message-list ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
 
+.message-list li {
+    padding: 2em;
+    
+}
 
 
 
