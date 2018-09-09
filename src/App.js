@@ -18,20 +18,22 @@ import MessageList from './components/MessageList';
 class App extends Component {
     constructor(props) {
         super(props);
-        this.handleActiveRoom = this.handleActiveRoom.bind(this);
+        this.setRoom = this.setRoom.bind(this);
         this.state = {
-            activeRoom: {}
+            activeRoom: ""
         };
     }
     
-    handleActiveRoom(room) {
+    setRoom(room) {
         console.log(room);
+        this.setState({ activeRoom: room });
+        console.log(this.state.activeRoom) //setState is async so this may not update right away
     }
     
   render() {
     return (
       <div className="App">
-        <RoomList firebase={firebase} activeRoom={this.state.activeRoom} handleActiveRoom={this.handleActiveRoom.bind(this)} />
+        <RoomList firebase={firebase} activeRoom={this.state.activeRoom} setRoom={this.setRoom.bind(this)} />
         <MessageList firebase={firebase} activeRoom={this.state.activeRoom}/>
       </div>
         
@@ -43,3 +45,4 @@ export default App;
 
 
 
+/* 20180909 - changed handleActiveRoom to setRoom*/

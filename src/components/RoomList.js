@@ -50,7 +50,7 @@ class RoomList extends Component {
                <ul className="roomlist__list">
                   {
                        this.state.rooms.map((el, idx) => 
-                           <li key={el.key} className="roomlist__item" onClick={ this.props.handleActiveRoom(el)}>{el.name}</li>)
+                           <li key={el.key} className="roomlist__item" onClick={ () => this.props.setRoom(el)}>{el.name}</li>)
                   }
                </ul>
             </div>
@@ -71,5 +71,6 @@ class RoomList extends Component {
 }
 
 export default RoomList;
+
 
 
