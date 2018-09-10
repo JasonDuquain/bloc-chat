@@ -6,7 +6,6 @@ class RoomList extends Component {
         this.roomsRef = this.props.firebase.database().ref('rooms');
         this.handleModal = this.handleModal.bind(this);
         this.handleCreateRoom = this.handleCreateRoom.bind(this);
-        //this.handleActiveRoom = this.handleActiveRoom.bind(this);
         this.state = {
             rooms: []
         };

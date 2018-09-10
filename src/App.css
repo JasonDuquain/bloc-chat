@@ -94,6 +94,7 @@
     background-color: #666;
 }
 
+/************  Main Message List  *********************/
 
 .message-list {
     width: 66%;
@@ -117,8 +118,19 @@
 
 
 
+/************* User sign in **********/
 
+.sign-in {
+    float: right;
+    padding-right: 1em;
+}
 
+.sign-in button {
+    cursor: pointer;
+    padding: .5em 1em;
+}
 
-
+.sign-in button:hover {
+    color: #333;
+}
 

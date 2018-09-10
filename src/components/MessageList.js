@@ -19,7 +19,7 @@ class MessageList extends Component {
    }
     
     render() {
-        console.log(this.props.activeRoom, this.state.messages);
+        
         return (
             <section className="message-list">
                <h2>{this.props.activeRoom.name}</h2>
